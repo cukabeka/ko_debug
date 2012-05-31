@@ -101,6 +101,6 @@ if ($REX['ADDON']['settings']['ko_debug']['ghost'] &&
    * vorhandener Funktionen.
    */
   function ghost_echo() {
-    return true;
+    return;
   }
 }

@@ -30,9 +30,9 @@ function ghost_echo($input) {
   // setze vor die Ausgabe einen deutlichen Hinweis auf die Debug-Ausgabe
   $return = '<span style="display:none;">DEBUGOUT ghost_echo: </span>'.$return."\n";
   // gib die Debuginfos aus
-  echo $return;
+  return $return;
 
-  return true;
+  #return true;
 }
 
 
