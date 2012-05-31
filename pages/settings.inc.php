@@ -34,6 +34,13 @@ if ($REX['ADDON']['settings']['ko_debug']['krumo'] == '1') {
 } else {
   $aktvieren_krumo = $I18N->msg('ko_debug_krumo').' '.$I18N->msg('ko_debug_aktivieren');
 }
+$ghost = '';
+if ($REX['ADDON']['settings']['ko_debug']['ghost'] == '1') {
+  $ghost = ' checked="checked"';
+  $aktvieren_ghost = $I18N->msg('ko_debug_ghost').' '.$I18N->msg('ko_debug_deaktivieren');
+} else {
+  $aktvieren_krumo = $I18N->msg('ko_debug_ghost').' '.$I18N->msg('ko_debug_aktivieren');
+}
 
 
 echo '
@@ -64,6 +71,14 @@ echo '
             <input type="hidden" name="settings[krumo]" value="0" />
             <input class="rex-form-checkbox" type="checkbox" id="krumo" name="settings[krumo]" value="1"'.$krumo.' />
             <label for="krumo">'.$aktvieren_krumo.'</label>
+          </p>
+        </div>
+        
+        <div class="rex-form-row">
+          <p class="rex-form-checkbox rex-form-label-right">
+            <input type="hidden" name="settings[krumo]" value="0" />
+            <input class="rex-form-checkbox" type="checkbox" id="krumo" name="settings[krumo]" value="1"'.$ghost.' />
+            <label for="krumo">'.$aktvieren_ghost.'</label>
           </p>
         </div>
         

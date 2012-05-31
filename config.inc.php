@@ -17,7 +17,7 @@ if ($REX['REDAXO']) {
 $REX['ADDON']['page'][$mypage] = $mypage;    
 $REX['ADDON']['name'][$mypage] = 'ko_Debug';
 $REX['ADDON']['perm'][$mypage] = 'ko_debug[]';
-$REX['ADDON']['version'][$mypage] = "1.1.3";
+$REX['ADDON']['version'][$mypage] = "1.1.4";
 $REX['ADDON']['author'][$mypage] = "Sven (Koala) Eichler";
 // $REX['ADDON']['supportpage'][$mypage] = "";
 
@@ -84,6 +84,23 @@ if ($REX['ADDON']['settings']['ko_debug']['krumo'] &&
    * vorhandener Funktionen.
    */
   function krumo() {
+    return true;
+  }
+}
+
+if ($REX['ADDON']['settings']['ko_debug']['ghost'] && 
+    rex_hasBackendSession() == 1 &&
+    version_compare(PHP_VERSION, '5.0.0', '>=')) {
+  include_once ('functions/function_ghost_echo.inc.php');
+} else {
+  /**
+   * Dummyfunktion
+   * 
+   * Wenn krumo deaktiviert wurde, so gibt es mit 
+   * dieser Funktion keine Fehlermeldung bezüglich nicht 
+   * vorhandener Funktionen.
+   */
+  function ghost_echo() {
     return true;
   }
 }

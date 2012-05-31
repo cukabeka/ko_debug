@@ -4,6 +4,7 @@ ko_debug_name = ko_Debug
 ko_debug_settings = Einstellungen
 ko_debug_debug = Debug-Funktion
 ko_debug_krumo = Krumo-Klasse
+ko_debug_ghost = Ghost-Funktion (Nur mit REX-Session ausgeben)
 ko_debug_dir = Ordner
 ko_debug_save = Einstellungen speichern
 ko_debug_saved = Die Einstellungen wurden gespeichert.
