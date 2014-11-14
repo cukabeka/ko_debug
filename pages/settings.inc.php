@@ -23,23 +23,30 @@ if (rex_post('func', 'string') == 'update')
 $debug = '';
 if ($REX['ADDON']['settings']['ko_debug']['debug'] == '1') {
   $debug = ' checked="checked"';
-  $aktvieren_debug = $I18N->msg('ko_debug_debug').' '.$I18N->msg('ko_debug_deaktivieren');
+  $activate_debug = $I18N->msg('ko_debug_debug').' '.$I18N->msg('ko_debug_deaktivieren');
 } else {
-  $aktvieren_debug = $I18N->msg('ko_debug_debug').' '.$I18N->msg('ko_debug_aktivieren');
+  $activate_debug = $I18N->msg('ko_debug_debug').' '.$I18N->msg('ko_debug_aktivieren');
 }
 $krumo = '';
 if ($REX['ADDON']['settings']['ko_debug']['krumo'] == '1') {
   $krumo = ' checked="checked"';
-  $aktvieren_krumo = $I18N->msg('ko_debug_krumo').' '.$I18N->msg('ko_debug_deaktivieren');
+  $activate_krumo = $I18N->msg('ko_debug_krumo').' '.$I18N->msg('ko_debug_deaktivieren');
 } else {
-  $aktvieren_krumo = $I18N->msg('ko_debug_krumo').' '.$I18N->msg('ko_debug_aktivieren');
+  $activate_krumo = $I18N->msg('ko_debug_krumo').' '.$I18N->msg('ko_debug_aktivieren');
+}
+$ghost = '';
+if ($REX['ADDON']['settings']['ko_debug']['kint'] == '1') {
+  $ghost = ' checked="checked"';
+  $activate_ghost = $I18N->msg('ko_debug_kint').' '.$I18N->msg('ko_debug_deaktivieren');
+} else {
+  $activate_krumo = $I18N->msg('ko_debug_kint').' '.$I18N->msg('ko_debug_aktivieren');
 }
 $ghost = '';
 if ($REX['ADDON']['settings']['ko_debug']['ghost'] == '1') {
   $ghost = ' checked="checked"';
-  $aktvieren_ghost = $I18N->msg('ko_debug_ghost').' '.$I18N->msg('ko_debug_deaktivieren');
+  $activate_ghost = $I18N->msg('ko_debug_ghost').' '.$I18N->msg('ko_debug_deaktivieren');
 } else {
-  $aktvieren_krumo = $I18N->msg('ko_debug_ghost').' '.$I18N->msg('ko_debug_aktivieren');
+  $activate_krumo = $I18N->msg('ko_debug_ghost').' '.$I18N->msg('ko_debug_aktivieren');
 }
 
 
@@ -62,7 +69,7 @@ echo '
           <p class="rex-form-checkbox rex-form-label-right">
             <input type="hidden" name="settings[debug]" value="0" />
             <input class="rex-form-checkbox" type="checkbox" id="debug" name="settings[debug]" value="1"'.$debug.' />
-            <label for="debug">'.$aktvieren_debug.'</label>
+            <label for="debug">'.$activate_debug.'</label>
           </p>
         </div>
         
@@ -70,15 +77,23 @@ echo '
           <p class="rex-form-checkbox rex-form-label-right">
             <input type="hidden" name="settings[krumo]" value="0" />
             <input class="rex-form-checkbox" type="checkbox" id="krumo" name="settings[krumo]" value="1"'.$krumo.' />
-            <label for="krumo">'.$aktvieren_krumo.'</label>
+            <label for="krumo">'.$activate_krumo.'</label>
           </p>
         </div>
         
         <div class="rex-form-row">
           <p class="rex-form-checkbox rex-form-label-right">
-            <input type="hidden" name="settings[krumo]" value="0" />
-            <input class="rex-form-checkbox" type="checkbox" id="krumo" name="settings[krumo]" value="1"'.$ghost.' />
-            <label for="krumo">'.$aktvieren_ghost.'</label>
+            <input type="hidden" name="settings[kint]" value="0" />
+            <input class="rex-form-checkbox" type="checkbox" id="kint" name="settings[kint]" value="1"'.$kint.' />
+            <label for="kint">'.$activate_kint.'</label>
+          </p>
+        </div>
+        
+        <div class="rex-form-row">
+          <p class="rex-form-checkbox rex-form-label-right">
+            <input type="hidden" name="settings[ghost]" value="0" />
+            <input class="rex-form-checkbox" type="checkbox" id="ghost" name="settings[ghost]" value="1"'.$ghost.' />
+            <label for="ghost">'.$activate_ghost.'</label>
           </p>
         </div>
         
