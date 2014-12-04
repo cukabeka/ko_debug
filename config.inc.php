@@ -17,7 +17,7 @@ if ($REX['REDAXO']) {
 $REX['ADDON']['page'][$mypage] = $mypage;    
 $REX['ADDON']['name'][$mypage] = 'ko_Debug';
 $REX['ADDON']['perm'][$mypage] = 'ko_debug[]';
-$REX['ADDON']['version'][$mypage] = "1.2";
+$REX['ADDON']['version'][$mypage] = "1.3";
 $REX['ADDON']['author'][$mypage] = "Sven (Koala) Eichler, cukabeka";
 // $REX['ADDON']['supportpage'][$mypage] = "";
 

@@ -34,19 +34,19 @@ if ($REX['ADDON']['settings']['ko_debug']['krumo'] == '1') {
 } else {
   $activate_krumo = $I18N->msg('ko_debug_krumo').' '.$I18N->msg('ko_debug_aktivieren');
 }
-$ghost = '';
+$kint = '';
 if ($REX['ADDON']['settings']['ko_debug']['kint'] == '1') {
-  $ghost = ' checked="checked"';
-  $activate_ghost = $I18N->msg('ko_debug_kint').' '.$I18N->msg('ko_debug_deaktivieren');
+  $kint = ' checked="checked"';
+  $activate_kint = $I18N->msg('ko_debug_kint').' '.$I18N->msg('ko_debug_deaktivieren');
 } else {
-  $activate_krumo = $I18N->msg('ko_debug_kint').' '.$I18N->msg('ko_debug_aktivieren');
+  $activate_kint = $I18N->msg('ko_debug_kint').' '.$I18N->msg('ko_debug_aktivieren');
 }
 $ghost = '';
 if ($REX['ADDON']['settings']['ko_debug']['ghost'] == '1') {
   $ghost = ' checked="checked"';
   $activate_ghost = $I18N->msg('ko_debug_ghost').' '.$I18N->msg('ko_debug_deaktivieren');
 } else {
-  $activate_krumo = $I18N->msg('ko_debug_ghost').' '.$I18N->msg('ko_debug_aktivieren');
+  $activate_ghost = $I18N->msg('ko_debug_ghost').' '.$I18N->msg('ko_debug_aktivieren');
 }
 
 
